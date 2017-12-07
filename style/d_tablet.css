@@ -1,0 +1,448 @@
+ @media only screen and (max-width: 1024px) {
+     .view-home h1 {
+         text-align: center;
+         width: 100%;
+         left: 0;
+         right: 0;
+         color: #000;
+         bottom: 5%;
+         text-shadow: -1px 3px 0px rgba(255, 255, 255, 1);
+         z-index: 9
+     }
+     .mob-menu {
+         position: absolute;
+         left: -100px;
+         top: 0;
+         z-index: 9;
+         background: #61b96a url(../images/mob-menu.svg) no-repeat center center;
+         background-size: 30px 30px;
+         height: 60px;
+         width: 60px;
+         font-size: 0;
+         cursor: pointer;
+         -webkit-animation-name: zoomIn;
+         animation-name: zoomIn;
+         -webkit-animation-duration: .20s;
+         animation-duration: .30s;
+         -webkit-animation-fill-mode: both;
+         animation-fill-mode: both;
+         transition: all .2s ease-in-out;
+     }
+     .mob-menu.active {
+         transform: rotate(90deg)
+     }
+     .d-menu {
+         position: absolute;
+         top: 0;
+         right: -1400px;
+         z-index: 9;
+         width: calc( 100% - 60px);
+         display: table;
+         font-size: 20px;
+     }
+     .view-about .d-menu {
+         z-index: 999;
+     }
+     .d-menu>div {
+         display: table-cell;
+         height: 60px;
+         width: 20%;
+         vertical-align: middle;
+         text-align: center;
+         background: #1d6b75;
+         color: #fff;
+     }
+     .view-showcase .d-menu>div {
+         background: #FF5722;
+     }
+     .view-talk .d-menu>div {
+         background: #461726;
+     }
+     /* about us */
+     .view-stack h1 {
+         color: #941123;
+         width: 100%;
+     }
+     .view-stack h1 .slogan {
+         display: inline;
+         position: relative;
+         font-size: 25px;
+         top: -27px;
+         margin-left: 544px;
+         color: #000000;
+         text-shadow: none;
+         padding: 2px 5px;
+     }
+     .title-Bg,
+     .view-stack .title-Bg {
+         position: absolute;
+         left: 1000px;
+         height: 19px;
+         width: 100%;
+         background: #941123;
+         z-index: 9;
+         bottom: 0;
+     }
+     .view-stack .mob-menu {
+         background-color: #941123
+     }
+     /* stack */
+     .view-stack h1 {
+         color: #ffffff;
+         text-shadow: -1px 3px 0px rgb(0, 82, 119);
+     }
+     .view-stack h1 .slogan {
+         color: #fff;
+     }
+     .view-stack .title-Bg {
+         background: #ffffff;
+     }
+     .view-stack .mob-menu {
+         background-color: #005277
+     }
+     .view-stack .stack_list_wrapper {
+         left: 0;
+         width: calc(100% - 65px);
+         padding: 200px 0 0;
+         overflow: auto;
+         margin-bottom: 140px;
+     }
+     .view-stack .stack_list_wrapper:before {
+         position: fixed
+     }
+     .stack_list_wrapper>div.stack-angularjs {
+         left: 44%;
+         top: 30%;
+         width: 140px;
+         height: 140px;
+         transform: scale(1.4)
+     }
+     .stack_list_wrapper>div.stack-html {
+         left: 18%;
+         top: 29%;
+         width: 120px;
+         height: 120px;
+         transform: scale(1.2)
+     }
+     .stack_list_wrapper>div.stack-css {
+         left: 39%;
+         top: 58%;
+         width: 120px;
+         height: 120px;
+         transform: scale(1.2)
+     }
+     .stack_list_wrapper>div.stack-jquery {
+         left: 63%;
+         top: 49%;
+         width: 130px;
+         height: 130px;
+         transform: scale(1.3)
+     }
+     .stack_list_wrapper>div.stack-knockoutjs {
+         left: 58%;
+         top: 70%;
+         width: 110px;
+         height: 110px;
+         transform: scale(1)
+     }
+     .stack_list_wrapper>div.stack-restfulapi {
+         left: 74%;
+         top: 25%;
+         width: 100px;
+         height: 100px;
+         transform: scale(0.8)
+     }
+     .stack_list_wrapper>div.stack-javascript {
+         left: 10%;
+         top: 73%;
+         width: 130px;
+         height: 130px;
+         transform: scale(1.3)
+     }
+     .stack_list_wrapper>div.stack-photoshop {
+         left: 80%;
+         top: 85%;
+         width: 110px;
+         height: 110px;
+         transform: scale(0.6)
+     }
+     .stack_list_wrapper>div.stack-sass {
+         left: 39%;
+         top: 82%;
+         width: 100px;
+         height: 100px;
+         transform: scale(0.9)
+     }
+     .stack_list_wrapper>div.stack-less {
+         left: 4%;
+         top: 46%;
+         width: 100px;
+         height: 100px;
+         transform: scale(0.8)
+     }
+     .stack_list_wrapper>div.stack-gulp {
+         left: 30%;
+         top: 65%;
+         width: 120px;
+         height: 120px;
+         transform: scale(0.7)
+     }
+     .stack_list_wrapper>div.stack-magento {
+         left: 80%;
+         top: 65%;
+         width: 100px;
+         height: 100px;
+         transform: scale(1.1)
+     }
+     .stack_list_wrapper>div.stack-magento {
+         left: 80%;
+         top: 65%;
+         width: 100px;
+         height: 100px;
+         transform: scale(1.1)
+     }
+     .stack_list_wrapper>div.stack-bootstrap {
+         left: 24%;
+         top: 50%;
+         width: 100px;
+         height: 100px;
+         transform: scale(1.1);
+     }
+     .stack_list_wrapper>div.stack-grunt {
+         left: 84%;
+         top: 40%;
+         width: 100px;
+         height: 100px;
+         transform: scale(1);
+     }
+     .stack_list_wrapper>div.stack-react {
+         left: 71%;
+         top: 82%;
+         width: 100px;
+         height: 100px;
+         transform: scale(1);
+     }
+     .stack_list_wrapper>div.stack-wordpress {
+         left: 55%;
+         top: 89%;
+         width: 100px;
+         height: 100px;
+         transform: scale(1);
+     }
+     .stack_list_wrapper>div.stack-git {
+         left: 5%;
+         top: 56%;
+         width: 100px;
+         height: 100px;
+         transform: scale(0.7);
+     }
+     .rating-block {
+         bottom: 135px
+     }
+     .view-stack .stack_list_wrapper {
+         overflow: hidden;
+         width: calc(100% - 65px)
+     }
+     /* showcase styling */
+     .view-showcase .mob-menu {
+         background-color: #ff9900;
+     }
+     /*  */
+     .view-talk .home-lion {
+         opacity: 0.2;
+         transition: all 0.4s;
+     }
+     .form-style {
+         font-size: 25px;
+         line-height: 55px;
+         color: #fff;
+         max-width: 80%;
+         margin: 300px 0 0 10%;
+         position: relative;
+         z-index: 999;
+     }
+     .view-talk .mob-menu {
+         background-color: #43143c
+     }
+     .view-talk h1 {
+         text-align: center;
+         width: 100%;
+         left: 0;
+         right: 0;
+         color: #fff;
+         bottom: 5%;
+         text-shadow: -1px 3px 0px rgba(0, 0, 0, 1);
+     }
+     .view-talk h1 .slogan {
+         background: #000;
+         color: #fff;
+         text-shadow: none;
+         font-size: 22px;
+         position: relative;
+         top: -31px;
+         margin-left: 549px;
+         padding: 3px 8px;
+         display: none;
+     }
+     /*about page*/
+     .experience .item {
+         display: block;
+         clear: both;
+     }
+     .experience .item .col-2 {
+         clear: both;
+     }
+     .about-right-panel {
+         width: 40%;
+     }
+     .experience .name {
+         padding-top: 10px
+     }
+     .social-block {
+         width: 60%;
+     }
+     .highlights {
+         width: 100%;
+         left: 0%;
+         position: relative
+     }
+     .highlights li {
+         line-height: 1.2
+     }
+     .pro-pic {
+         width: 60%;
+     }
+     .highlights li {
+         margin-bottom: 10px;
+     }
+     .pro-pic {
+         background-size: cover;
+         background-position: 0 -100px;
+     }
+     .view-about .d-menu>div {
+         background: #e91e63;
+     }
+     .view-showcase h1 {
+         display: none;
+     }
+     .portfolio-panel .item {
+         width: 33% !important;
+         height: auto !important;
+     }
+     .highlights span {
+         width: 100%;
+     }
+     .view-about .job-info,
+     .view-showcase .job-info {
+         bottom: 50px;
+     }
+     .job-info {
+         width: 50px;
+         height: 50px;
+         bottom: 115px;
+         left: 50px;
+     }
+     .job-info .job {
+         left: 0;
+         bottom: 80px;
+     }
+     .job-info:before {
+         font-size: 40px;
+     }
+     .job:before {
+         left: 20px;
+     }
+     .job:after {
+         left: 22px;
+     }
+     /* about */
+     .pro-panel {
+         opacity: 0.2;
+         width: 100%;
+         max-width: 100%;
+     }
+     .about-info-wrapper {
+         position: absolute;
+         left: 40px;
+         top: 80px;
+     }
+     .view-about .mob-menu {
+         background-color: #000;
+     }
+     .info-tab {
+         position: absolute;
+         top: 230px;
+         left: 40px;
+     }
+     .info-tab>div.tab-content>div {
+         display: none
+     }
+     .view-about .social-panel {
+         right: 0;
+         width: 100%;
+         text-align: center;
+         bottom: 85px;
+     }
+     .view-about .social-panel>a.sm-icn {
+         margin: 0 20px;
+     }
+     .view-about h1 {
+         color: #000;
+         width: 100%;
+     }
+     .view-about h1 .slogan {
+         display: inline;
+         position: relative;
+         font-size: 25px;
+         top: -27px;
+         margin-left: 544px;
+         color: #e91e63;
+         text-shadow: none;
+         padding: 2px 5px;
+     }
+     .info-tab {
+         width: 90%;
+     }
+ }
+ 
+ @media screen and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px) {
+     .rating-block>div>span {
+         font-size: 20px;
+         top: 125px;
+     }
+     .rating-block {
+         bottom: 0;
+     }
+     .about-right-panel {
+         width: 35%;
+     }
+     .highlights {
+         width: 30%;
+         left: 35%;
+         position: absolute;
+         height: 100%
+     }
+     .highlights li {
+         line-height: 1.8
+     }
+     .social-block {
+         width: 35%;
+     }
+     .pro-pic {
+         width: 35%;
+         background-size: cover;
+         background-position: center center;
+     }
+     .social-links>div {
+         margin-bottom: 10px;
+     }
+     .highlights li {
+         margin-bottom: 20px;
+     }
+     .social-block span {
+         width: 100px;
+     }
+     .social-block a {
+         font-size: 9px;
+     }
+ }

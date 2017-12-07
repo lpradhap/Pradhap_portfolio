@@ -1,0 +1,262 @@
+    @media only screen and (max-width: 767px) {
+        body {
+            overflow: auto !important;
+        }
+        body .screen {
+            margin-bottom: 60px;
+        }
+        .loader {
+            font-size: 80px;
+        }
+        .view-home h1,
+        .view-stack h1,
+        .view-showcase h1,
+        .view-talk h1,
+        .view-about h1 {
+            left: 0;
+            width: 100%;
+            text-align: left;
+            bottom: -100px;
+            font-size: 25px;
+            padding: 0 15px;
+            z-index: 9999;
+            text-shadow: none;
+            color: #fff;
+            display: block;
+            position: fixed;
+        }
+        .view-home h1 {
+            background: #ad429b;
+        }
+        .view-showcase h1 {
+            background: #ff9900;
+        }
+        .view-talk h1 {
+            background: #43143c;
+        }
+        .view-about h1 {
+            background: #000;
+        }
+        .view-stack {
+            overflow: hidden
+        }
+        .view-stack h1,
+        .view-stack .mob-menu {
+            background-color: #008ab5;
+        }
+        .active-menu.view-home h1 {
+            background: #ba3c12
+        }
+        .mob-menu {
+            background-color: transparent;
+            background-size: inherit;
+            height: 60px;
+            width: 60px;
+            right: -100px;
+            bottom: 0;
+            left: inherit;
+            top: inherit;
+            z-index: 99999;
+            position: fixed
+        }
+        .mob-menu-wrapper {
+            right: -100%;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(56, 0, 0, 0.7);
+            z-index: 999;
+            padding-top: 60px;
+        }
+        .view-talk .mob-menu-wrapper {
+            background: rgba(27, 1, 37, 0.8);
+        }
+        .view-showcase .mob-menu-wrapper {
+            background: rgba(47, 31, 8, 0.8)
+        }
+        .view-stack .mob-menu-wrapper {
+            background: rgba(0, 0, 0, 0.8)
+        }
+        .mob-menu-wrapper>div.d-menu {
+            display: block;
+            top: 20px;
+            position: relative;
+            right: inherit;
+            left: 0;
+            width: 50%;
+            margin: auto;
+        }
+        .mob-menu-wrapper>div.d-menu>div {
+            background: transparent;
+            display: block;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            line-height: 2;
+            font-size: 20px;
+        }
+        .mob-menu-wrapper .sm-icn {
+            right: inherit;
+            width: 34px;
+            height: 34px;
+            right: inherit;
+            bottom: 100px;
+        }
+        .portfolio-panel {
+            padding-bottom: 60px;
+            position: relative;
+        }
+        .portfolio-panel .item {
+            height: 200px !important;
+            width: 100% !important;
+            display: block;
+        }
+        .mob-menu-wrapper .linkedin.sm-icn {
+            background-position: 0px -100px;
+            left: 30%;
+        }
+        .mob-menu-wrapper .sm-icn.github {
+            background-position: -50px -100px;
+            left: 50%;
+        }
+        .mob-menu-wrapper .sm-icn.stackoverflow {
+            background-position: -100px -100px;
+            left: 70%;
+            width: 33px;
+            height: 38px;
+            border-radius: 0;
+        }
+        .view-stack .sm-icn {
+            top: initial
+        }
+        .stack_list_wrapper {
+            width: 100%;
+            left: 0;
+            height: calc(100vh - 0px);
+            padding-top: 0;
+            overflow: auto;
+            padding-bottom: 50px;
+        }
+        .stack_list_wrapper::before {
+            position: fixed
+        }
+        .stack_list_wrapper>div {
+            float: none;
+            width: 100%;
+        }
+        .view-stack .stack_list_wrapper {
+            width: 100%;
+            overflow: auto;
+            margin-bottom: 60px;
+            padding-top: 50px;
+            z-index: 1;
+        }
+        .view-stack .stack_list_wrapper>div.stack-item {
+            position: relative;
+            margin: 0 auto 0;
+            left: auto;
+            top: auto;
+            width: 100px;
+            height: 100px;
+            transform: scale(1);
+            float: left;
+            margin: 20px 30px;
+        }
+        .large-header canvas {
+            opacity: 0.2
+        }
+        .view-about .about-desc {
+            font-size: 17px;
+            line-height: 25px;
+            width: 100%;
+            max-width: 100%;
+            top: -150px;
+            padding-right: 50px;
+            position: relative;
+            text-align: center
+        }
+        .content_wrapper {
+            height: 100vh;
+            padding-bottom: 60px;
+            overflow: auto;
+            position: relative;
+            z-index: 1;
+        }
+        .form-style {
+            font-size: 20px;
+            line-height: 25px;
+            color: #fff;
+            max-width: 80%;
+            margin: 50px 0 0 10%;
+            position: relative;
+            z-index: 9;
+        }
+        .form-style em {
+            display: none;
+        }
+        .form-style input,
+        .form-style textarea {
+            margin: 0 0 30px;
+        }
+        .form-style span {
+            margin: 0
+        }
+        .job-info {
+            width: 50px;
+            height: 50px;
+            bottom: 75px;
+            left: 10px;
+        }
+        .job-info .job {
+            left: 0;
+            bottom: 80px;
+        }
+        .job:before {
+            left: 20px;
+        }
+        .job:after {
+            left: 22px;
+        }
+        .form-style input#name {
+            width: 100%;
+        }
+        .about-contact-panel>div {
+            display: block;
+            margin: 0 0 15px 0 !important;
+        }
+        .view-about .social-panel>a.sm-icn {
+            display: block !important;
+            margin: auto auto 30px !important;
+            position: relative;
+        }
+        .view-about .social-panel,
+        .about-info-wrapper,
+        .info-tab {
+            position: relative;
+            bottom: auto;
+            top: 25px;
+            max-height: inherit;
+            max-width: 85%;
+            left: 20px;
+            padding-bottom: 20px;
+            padding-right: 0;
+        }
+        .info-tab>div.nav span {
+            margin: 0 5px 0 0;
+            padding-right: 5px;
+            border-right: solid 2px #000;
+        }
+        .pro-panel {
+            position: fixed;
+        }
+        .view-about .social-panel {
+            margin-bottom: 60px;
+        }
+        .form-style input[type=text],
+        .form-style input[type=email],
+        .form-style input[type=tel],
+        .form-style textarea {
+            width: 100%;
+        }
+    }

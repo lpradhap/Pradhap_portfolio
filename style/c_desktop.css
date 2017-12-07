@@ -1,0 +1,307 @@
+@media only screen and (min-width: 1025px) {
+     ::-webkit-scrollbar {
+        width: 10px;
+    }
+     ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+    }
+     ::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+    }
+    .view-home .mob-menu {
+        display: none
+    }
+    .view-home .d-menu #nav-home {
+        display: none;
+    }
+    .view-home .d-menu {
+        display: table;
+        width: 70%;
+        z-index: 9;
+        position: relative;
+        top: 86px;
+        margin: auto;
+    }
+    .view-home .d-menu>div {
+        display: table-cell;
+        width: 20%;
+        text-align: center;
+        padding: 20px;
+        top: -200px;
+        position: relative;
+        font-size: 20px;
+        background: #c4d84a;
+        color: #000;
+        cursor: pointer;
+        -webkit-animation-name: zoomIn;
+        animation-name: zoomIn;
+        -webkit-animation-duration: .20s;
+        animation-duration: .30s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        transition: all .2s ease-in-out;
+    }
+    .view-home .d-menu>div.active {
+        background: #ad429b;
+        color: #fff;
+    }
+    .view-home .d-menu>div:hover {
+        transform: scale(1.2);
+        background: #ad429b;
+        color: #fff;
+        z-index: 99;
+    }
+    .view-stack h1,
+    .view-talk h1 {
+        top: -120px;
+        bottom: inherit !important;
+        left: 22px;
+        font-size: 40px;
+    }
+    .view-talk h1 .slogan,
+    .view-stack h1 .slogan {
+        display: inline;
+        position: relative;
+        font-size: 16px;
+        top: -43px;
+        margin-left: 233px;
+        color: #ca510c;
+    }
+    .view-talk h1 .slogan {
+        color: #9a9a9a;
+    }
+    .view-talk .d-menu,
+    .view-stack .d-menu {
+        position: absolute;
+        left: -1800px;
+        top: 130px;
+        display: block;
+        font-size: 22px;
+        z-index: 999;
+    }
+    .view-talk .d-menu>div,
+    .view-stack .d-menu>div,
+    .view-showcase .d-menu>div,
+    .view-about .d-menu>div {
+        position: relative;
+        display: inline-block;
+        margin-right: 35px;
+        cursor: pointer;
+        -webkit-animation-name: zoomIn;
+        animation-name: zoomIn;
+        -webkit-animation-duration: .20s;
+        animation-duration: .30s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        transition: color .2s ease-in-out;
+    }
+    .view-talk .d-menu>#nav-talk {
+        border-bottom: solid 4px #c7c7c7;
+        color: #c7c7c7;
+    }
+    .view-talk .d-menu>div:hover {
+        color: #c7c7c7
+    }
+    .view-talk .d-menu {
+        color: #989898;
+    }
+    .view-talk h1 {
+        color: #9a9a9a;
+        text-shadow: none;
+    }
+    /* stack  */
+    .view-stack h1 {
+        color: #002233;
+        text-shadow: none;
+    }
+    .view-stack .d-menu {
+        color: #023;
+    }
+    .view-stack .d-menu>div.active-menu {
+        border-bottom: solid 4px #fff;
+        color: #fff
+    }
+    .view-stack .d-menu>div:hover {
+        color: #fff
+    }
+    .view-stack h1 .slogan {
+        color: #002233
+    }
+    .stack_list_wrapper>div.stack-angularjs {
+        left: 44%;
+        top: 30%;
+        width: 140px;
+        height: 140px;
+        transform: scale(1.4)
+    }
+    .stack_list_wrapper>div.stack-html {
+        left: 18%;
+        top: 29%;
+        width: 120px;
+        height: 120px;
+        transform: scale(1.2)
+    }
+    .stack_list_wrapper>div.stack-css {
+        left: 39%;
+        top: 58%;
+        width: 120px;
+        height: 120px;
+        transform: scale(1.2)
+    }
+    .stack_list_wrapper>div.stack-jquery {
+        left: 68%;
+        top: 43%;
+        width: 130px;
+        height: 130px;
+        transform: scale(1.3)
+    }
+    .stack_list_wrapper>div.stack-knockoutjs {
+        left: 58%;
+        top: 70%;
+        width: 110px;
+        height: 110px;
+        transform: scale(1)
+    }
+    .stack_list_wrapper>div.stack-restfulapi {
+        left: 74%;
+        top: 25%;
+        width: 100px;
+        height: 100px;
+        transform: scale(0.8)
+    }
+    .stack_list_wrapper>div.stack-javascript {
+        left: 10%;
+        top: 73%;
+        width: 130px;
+        height: 130px;
+        transform: scale(1.3)
+    }
+    .stack_list_wrapper>div.stack-photoshop {
+        left: 80%;
+        top: 85%;
+        width: 110px;
+        height: 110px;
+        transform: scale(0.6)
+    }
+    .stack_list_wrapper>div.stack-sass {
+        left: 39%;
+        top: 82%;
+        width: 100px;
+        height: 100px;
+        transform: scale(0.9)
+    }
+    .stack_list_wrapper>div.stack-less {
+        left: 4%;
+        top: 46%;
+        width: 100px;
+        height: 100px;
+        transform: scale(0.8)
+    }
+    .stack_list_wrapper>div.stack-gulp {
+        left: 30%;
+        top: 65%;
+        width: 120px;
+        height: 120px;
+        transform: scale(0.7)
+    }
+    .stack_list_wrapper>div.stack-magento {
+        left: 80%;
+        top: 65%;
+        width: 100px;
+        height: 100px;
+        transform: scale(1.1)
+    }
+    .stack_list_wrapper>div.stack-magento {
+        left: 80%;
+        top: 65%;
+        width: 100px;
+        height: 100px;
+        transform: scale(1.1)
+    }
+    .stack_list_wrapper>div.stack-bootstrap {
+        left: 24%;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+        transform: scale(1.1);
+    }
+    .stack_list_wrapper>div.stack-grunt {
+        left: 87%;
+        top: 40%;
+        width: 100px;
+        height: 100px;
+        transform: scale(1);
+    }
+    .stack_list_wrapper>div.stack-react {
+        left: 71%;
+        top: 82%;
+        width: 100px;
+        height: 100px;
+        transform: scale(0.7);
+    }
+    .stack_list_wrapper>div.stack-wordpress {
+        left: 91%;
+        top: 72%;
+        width: 100px;
+        height: 100px;
+        transform: scale(0.7);
+    }
+    .stack_list_wrapper>div.stack-git {
+        left: 49%;
+        top: 76%;
+        width: 100px;
+        height: 100px;
+        transform: scale(0.7);
+    }
+    /* showcase*/
+    .view-showcase h1 {
+        color: #ff9900;
+        font-size: 40px;
+        line-height: 22px;
+        height: 54px;
+        /* bottom: initial; */
+        top: initial;
+        display: flex;
+        /* align-items: center; */
+        vertical-align: middle;
+        left: -600px;
+        top: 18px;
+    }
+    .view-talk .d-menu>div.active {
+        color: #c7c7c7;
+        border-bottom: 4px #c7c7c7 solid;
+    }
+    .view-about .d-menu {
+        position: absolute;
+        top: -100%;
+        left: 40%;
+        z-index: 1;
+        font-size: 22px;
+    }
+    .view-about .d-menu #nav-about {
+        color: #e91e63;
+        border-bottom: solid 4px #e91e63;
+    }
+    .view-about .d-menu>div:hover {
+        color: #000;
+    }
+}
+
+@media only screen and (max-height: 900px) and (min-width: 1025px) {
+    .rating-block>div>span {
+        font-size: 30px;
+        top: 125px;
+    }
+}
+
+@media only screen and (min-height: 900px) {
+    .highlights li {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .portfolio-panel .item .name {
+        font-size: 25px;
+    }
+}
