@@ -111,7 +111,7 @@ d.showcase = (() => {
             $(d.sys.cssSelector(ui.createShowCaseBlocks._bLineItem)).each((i, el) => {
 
                 let name = '<div class="name">' + d.cms.portfolio[i].name + '</div>';
-                let des = '<div class="des">' + d.cms.portfolio[i].des + '</div>';
+                let des = '<div class="des">' + d.cms.portfolio[i].des + '<div class="des-info">' + d.cms.portfolio[i].info + '</div></div>';
                 let blankName = d.cms.portfolio[i].name;
                 let cssClass = blankName.replace(/ /g, '').toLowerCase();
                 let html = name + des;

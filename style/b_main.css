@@ -28,6 +28,11 @@ body {
     z-index: 999;
 }
 
+.loading-text {
+    font-size: 50px;
+    vertical-align: middle;
+}
+
 .loader {
     color: #fff;
     font-family: Consolas, Menlo, Monaco, monospace;
@@ -40,9 +45,10 @@ body {
     right: 0;
     bottom: 0;
     margin: auto;
-    width: 125px;
+    width: 315px;
     height: 125px;
     z-index: 999999;
+    text-align: center
 }
 
 .loader span {
@@ -797,12 +803,11 @@ h1 {
 .showcase-title div.before {
     content: '';
     position: absolute;
-    background: #190303;
+    background: url(../images/showcase-bg.png) repeat;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.7;
 }
 
 .portfolio-panel {
@@ -1397,4 +1402,11 @@ body .form-style .error {
     width: auto;
     opacity: 0.6;
     z-index: 0;
+}
+
+.portfolio-panel .des-info {
+    font-size: 10px;
+    font-weight: 400;
+    color: #c3c3c3;
+    margin: 3px 0 0 0;
 }
