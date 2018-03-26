@@ -69,9 +69,12 @@ d.home = (() => {
             h.location.events()
         },
         showMsg: () => {
+
+
             $('body').append('<div class="' + h.location._trigger + '"><div class="' + h.location._panel + '"> ' + d.cms.jobMsg + '</div></div>')
         },
         events: () => {
+            $(document).off('click', d.sys.cssSelector(h.location._trigger))
             $(document).on('click', d.sys.cssSelector(h.location._trigger), () => {
                 h.location.locationMsgShow();
             })

@@ -7,6 +7,7 @@ d.about = function () {
         $('body').removeClass('view-home view-talk view-stack view-showcase').addClass('view-about').attr('data-screen', 'about');
         ui.deviceInit();
         d.home.location.init();
+        ui.menu.refresh();
     };
 
     ui.deviceInit = function () {
@@ -17,33 +18,70 @@ d.about = function () {
             case 'home':
                 d.sys.layoutType(function () {
                     ui.proPic.init();
-                    d.stack.setBg();
                 }, 'all');
                 d.sys.layoutType(function () {
+                    d.stack.setBg();
                     ui.menu.d_init();
                     ui.contactInfo.d();
                     ui.social.d();
                     ui.infoTab.d_init();
                 }, 'desktop');
-                d.sys.layoutType(function () {}, 'tablet');
-                d.sys.layoutType(function () {}, 'mobile');
+                d.sys.layoutType(function () {
+                    d.stack.setBg();
+                    ui.contactInfo.d();
+                    ui.social.d();
+                    ui.name.t();
+                    ui.infoTab.d_init();
+                    ui.menu.create();
+                }, 'tablet');
+                d.sys.layoutType(function () {
+
+                    ui.contactInfo.d();
+                    ui.infoTab.d_init();
+                    ui.social.d();
+                }, 'mobile');
                 break;
             default:
                 d.sys.layoutType(function () {
                     ui.proPic.init();
-                    d.stack.setBg();
                 }, 'all');
                 d.sys.layoutType(function () {
+                    d.stack.setBg();
                     ui.menu.d_init();
                     ui.contactInfo.d();
                     ui.social.d();
                     ui.infoTab.d_init();
                 }, 'desktop');
-                d.sys.layoutType(function () {}, 'tablet');
-                d.sys.layoutType(function () {}, 'mobile');
+                d.sys.layoutType(function () {
+                    d.stack.setBg();
+                    ui.contactInfo.d();
+                    ui.social.d();
+                    ui.name.t();
+                    ui.infoTab.d_init();
+                    ui.menu.create();
+                }, 'tablet');
+                d.sys.layoutType(function () {
+                    ui.contactInfo.d();
+                    ui.infoTab.d_init();
+                    ui.social.d();
+                }, 'mobile');
         }
     };
 
+    ui.name = {
+        create: function create() {
+            if (!$('h1').length) {
+                $(d.ref._siteHolder).append(d.cms.common_name_placeholder);
+                $('h1').find('span').show();
+            }
+        },
+        t: function t() {
+            ui.name.create();
+            $('h1').animate({
+                bottom: 50
+            }, 300);
+        }
+    };
     ui.proPic = {
         _panel: 'pro-panel',
         init: function init() {
@@ -66,6 +104,9 @@ d.about = function () {
             if (!$(d.sys.cssSelector(d.ref._menuPanel)).length) {
                 $(d.ref._siteHolder).append(d.cms.menu);
             }
+        },
+        refresh: function refresh() {
+            $(d.sys.cssSelector(d.ref._menuTrigger)).removeClass('active');
         }
     };
 
@@ -175,19 +216,27 @@ d.about = function () {
                 bottom: '-100%'
             }, 400);
 
-            $(d.sys.cssSelector(d.ref._menuPanel)).animate({
-                top: '-100%'
-            }, 400);
-
             $('#large-header').animate({
                 right: '-100%'
             }, 400);
         }, 'all');
 
-        d.sys.layoutType(function () {}, 'desktop');
+        d.sys.layoutType(function () {
+            $(d.sys.cssSelector(d.ref._menuPanel)).animate({
+                top: '-100%'
+            }, 400);
+        }, 'desktop');
 
-        d.sys.layoutType(function () {}, 'tablet');
-        d.sys.layoutType(function () {}, 'mobile');
+        d.sys.layoutType(function () {
+            if ($(d.sys.cssSelector(d.ref._menuTrigger)).hasClass('active')) {
+                $(d.sys.cssSelector(d.ref._menuTrigger)).trigger('click');
+            }
+        }, 'tablet');
+        d.sys.layoutType(function () {
+            if ($(d.sys.cssSelector(d.ref._menuTrigger)).hasClass('active')) {
+                $(d.sys.cssSelector(d.ref._menuTrigger)).trigger('click');
+            }
+        }, 'mobile');
         setTimeout(function () {
             $(d.sys.cssSelector(d.home.location._trigger)).remove();
             $(d.ref._siteHolder).empty();

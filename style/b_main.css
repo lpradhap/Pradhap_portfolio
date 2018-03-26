@@ -215,7 +215,7 @@ h1 {
     font-size: 22px;
     position: relative;
     top: -31px;
-    margin-left: 549px;
+    margin-left: 514px;
     padding: 3px 8px;
     display: none;
 }
@@ -708,7 +708,7 @@ h1 {
     position: static;
     width: 150px;
     text-align: center;
-    font-size: 30px;
+    font-size: 18px;
 }
 
 .rating-block>div.flw>span {
@@ -1121,7 +1121,7 @@ body .form-style .error {
     text-align: center;
 }
 
-.job-info:before {
+.job-info::after {
     content: '!';
     font-size: 50px;
     color: #fff;
@@ -1129,9 +1129,9 @@ body .form-style .error {
     align-items: center;
     justify-content: center;
     height: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
+    /* position: absolute; */
+    left: 0 !important;
+    right: 0 !important;
     opacity: 1
 }
 
@@ -1204,7 +1204,7 @@ body .form-style .error {
 
 .view-about .social-panel {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     z-index: 1;
     right: 5%;
 }
@@ -1303,6 +1303,7 @@ body .form-style .error {
     padding-right: 20px;
     opacity: 0;
     z-index: 1;
+    overflow: auto
 }
 
 .info-tab .tab-content {
