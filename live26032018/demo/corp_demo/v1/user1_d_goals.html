@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corp | Delegate Goals</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="style/common.css" type="text/css">
+  <link rel="stylesheet" href="style/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="style/font-awesome.min.css" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/corp.ui.js" type="text/javascript"></script>
+</head>
+
+<body class="logged-in" data-user="1">
+
+  <header class="container-fluid">
+    <div class="top-panel row">
+      <div class="logo-panel col-md-2 clearfix t-center">
+        <img src="images/logo.jpg" class="logo">
+        <div class="btn-nav-panel f-right">
+          <button class="btn-nav"></button>
+        </div>
+      </div>
+      <div class="action-panel col-md-10 t-right">
+        <div class="lang">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              EN-US
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">EN-US</a></li>
+              <li><a href="#">Tamil</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="noti">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <div class="noti-info fa fa-comments">
+                <span class="count">2</span>
+              </div>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">After you get up and running, you can place Font Awesome icons just about </a></li>
+              <li><a href="#">ning, you can place Font Awesome icons</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="help">
+          <button class="help btn">
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="user-info">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle dropdown-menu-right" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <span><i class="fa fa-user" aria-hidden="true"></i> Robin Reed</span>
+
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">Edit Profile</a></li>
+              <li><a href="#">Change Password</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="login.html">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="middle-panel row">
+      <div class="search-panel col-md-2">
+        <div>
+          <input type="text" class="c-search">
+        </div>
+      </div>
+      <div class="col-md-10 breadcrum-panel">
+        <a href="#">Goal Management</a> <a href="#">Delegate Goals</a>
+      </div>
+    </div>
+  </header>
+  <section class="container-fluid">
+    <div class="row">
+      <div class="left-nav col-md-2">
+
+      </div>
+      <div class="content-wrapper col-md-10">
+        <h2>Delegate Goals</h2>
+
+        <div class="container-panel">
+          <div class="container-title">
+            <span>User Information</span>
+          </div>
+          <div class="form-horizontal">
+
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">User Type</label>
+              <div class="col-sm-10">
+                <div class="bold-text">
+                  <label class="radio-inline bold-text-i">
+                    <input type="radio" checked="checked" name="userTypeRadio"  id="userTypeRadio" class="ctrl-radio-2" value="2"> Department
+                  </label>
+                  <label class="radio-inline bold-text-i">
+                    <input type="radio" id="userTypeRadio" class="ctrl-radio-2"  name="userTypeRadio" value="1"> Employee
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="employee-info" style="display: none;">
+              <div class="form-group ">
+                <label for="inputEmail3" class="col-sm-2 control-label">Employee Name</label>
+                <div class="col-sm-10">
+                  <select class="form-control" id="drpEmployee">
+                    <option>-- Select Employee --</option>
+                    <option value="1">James Butler</option>
+                    <option value="2">Jayan Muvindu</option>
+                    <option value="1">Nirshan Ibrahim</option>
+                    <option value="1">Saminda Karunaratne</option>
+                    <option value="1">Rohan Epa</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-horizontal " >
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Designation</label>
+                  <div class="col-sm-4">
+                    <p class="form-control-static">Marketing Manager</p>
+                    </select>
+                  </div>
+                  <label for="inputEmail3" class="col-sm-2 control-label">Department</label>
+                  <div class="col-sm-4">
+                    <p class="form-control-static">Marketing Department</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="form-group dep-view" >
+              <label for="inputEmail3" class="col-sm-2 control-label">Department Name</label>
+              <div class="col-sm-10">
+                <select class="form-control" id="drpDep">
+                  <option>-- Select Department --</option>
+                  <option value="1">Marketing</option>
+                  <option value="1">Sales</option>
+                  <option value="1">HR</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="form-group  view-type-one" style="display: none">
+          <button class="btn btn-primary btnNewGoal"  id="btnNewGoal">
+            <span>Delegate New Goal</span>
+          </button>
+        </div>
+        <div class="container-panel  view-type-two" style="display: none">
+          <div class="container-title">
+            <span>Goal Information</span>
+          </div>
+          <div class="container-panel">
+            <div class="form-horizontal">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Goal Type</label>
+                <div class="col-sm-10">
+                  <div class="bold-text">
+                    <label class="radio-inline bold-text-i">
+                      <input type="radio" checked="checked" name="goalTypeRadio"  id="goalTypeRadio" class="ctrl-radio-3" value="2"> New Goal
+                    </label>
+                    <label class="radio-inline bold-text-i">
+                      <input type="radio" id="goalTypeRadio" class="ctrl-radio-3"  name="goalTypeRadio" value="1"> Casecade Goal
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="goal1" style="display: none">
+                <label for="inputEmail3" class="col-sm-2 control-label">Goal Description</label>
+                <div class="col-sm-10">
+                  <select id="drpGoal1" class="form-control drpGoal">
+                    <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                    <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                    <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                    <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                    <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                  </select>
+                  <input class="form-control second-control" type="text"></input>
+                </div>
+              </div>
+              <div class="form-group" id="goal2">
+                <label for="inputEmail3" class="col-sm-2 control-label">Goal Description</label>
+                <div class="col-sm-10">
+                  <input class="form-control second-control" type="text"></input>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="bold-text">
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" checked="checked" name="inlineRadioOptions" id="inlineRadio2" class="ctrl-radio" value="2"> New KPI
+                      </label>
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" id="inlineRadio2" class="ctrl-radio" name="inlineRadioOptions" value="1"> Existing KPI
+                      </label>
+                    </div>
+                    <div>
+                      <select style="display: none;" id="drpGoal1" class="form-control drpGoal">
+                        <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                        <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                        <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                        <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                        <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      </select>
+                      <input class="form-control second-control" type="text"></input>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">UOM</label>
+                    <select class="form-control">
+                      <option>Number</option>
+                      <option>%</option>
+                      <option>LKR</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">Target Performance</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Score</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Perspective</label>
+                    <select class="form-control" id="drpEmployee">
+                      <option>-- Select Employee --</option>
+                      <option value="1">Financial (2)</option>
+                      <option value="2">Internal Process (4)</option>
+                      <option value="1">Customer (3)</option>
+                      <option value="1">People (1)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn btn-primary form-control btn-form-inline">
+                      <span>Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <table class="table table-striped">
+                <tr>
+                  <th>KPI Description</th>
+                  <th>UOM</th>
+                  <th>Target Performance</th>
+                  <th width="100px">Score</th>
+                  <th>Perspective</th>
+                  <th width="100px"></th>
+                </tr>
+                <tr>
+                  <td colspan="6" class="no-records">no records</td>
+                </tr>
+              </table>
+
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary">
+                <span>Save Goal</span>
+              </button>
+              <button class="btn btn-default">
+                <span>Cancel</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <div class="container-panel view-type-one" style="display: none">
+          <div class="container-title">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+          </div>
+          <div class="container-panel">
+            <div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="bold-text">
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" checked="checked" name="inlineRadioOptions" id="inlineRadio3" class="ctrl-radio" value="2"> New KPI
+                      </label>
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" id="inlineRadio2" class="ctrl-radio" name="inlineRadioOptions" value="1"> Existing KPI
+                      </label>
+                    </div>
+                    <select style="display: none;" id="drpGoal1" class="form-control drpGoal">
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                    </select>
+                    <input class="form-control second-control" type="text"></input>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">UOM</label>
+                    <select class="form-control">
+                      <option>Number</option>
+                      <option>%</option>
+                      <option>LKR</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">Target Performance</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Score</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Perspective</label>
+                    <select class="form-control" id="drpEmployee">
+                      <option>-- Select Employee --</option>
+                      <option value="1">Financial (2)</option>
+                      <option value="2">Internal Process (4)</option>
+                      <option value="1">Customer (3)</option>
+                      <option value="1">People (1)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn btn-primary form-control btn-form-inline">
+                      <span>Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <table class="table table-striped">
+                <tr>
+                  <th>KPI Description</th>
+                  <th>UOM</th>
+                  <th>Target Performance</th>
+                  <th width="100px">Score</th>
+                  <th>Perspective</th>
+                  <th width="100px"></th>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>Financial</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>Financial</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>People</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+              </table </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-panel view-type-one" style="display: none">
+          <div class="container-title">
+            <div class="">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+            </div>
+          </div>
+          <div class="container-panel">
+            <div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="bold-text">
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" checked="checked" name="inlineRadioOptions" id="inlineRadio2" class="ctrl-radio" value="2"> New KPI
+                      </label>
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" id="inlineRadio2" class="ctrl-radio" name="inlineRadioOptions" value="1"> Existing KPI
+                      </label>
+                    </div>
+                    <select style="display: none;" id="drpGoal1" class="form-control drpGoal">
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                    </select>
+                    <input class="form-control second-control" type="text"></input>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">UOM</label>
+                    <select class="form-control">
+                      <option>Number</option>
+                      <option>%</option>
+                      <option>LKR</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">Target Performance</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Score</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Perspective</label>
+                    <select class="form-control" id="drpEmployee">
+                      <option>-- Select Employee --</option>
+                      <option value="1">Financial (2)</option>
+                      <option value="2">Internal Process (4)</option>
+                      <option value="1">Customer (3)</option>
+                      <option value="1">People (1)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn btn-primary form-control btn-form-inline">
+                      <span>Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <table class="table table-striped">
+                <tr>
+                  <th>KPI Description</th>
+                  <th>UOM</th>
+                  <th>Target Performance</th>
+                  <th width="100px">Score</th>
+                  <th>Perspective</th>
+                  <th width="100px"></th>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>Financial</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>Financial</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>People</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+              </table </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-panel view-type-one" style="display: none">
+          <div class="container-title">
+            <div class="">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+            </div>
+          </div>
+          <div class="container-panel">
+            <div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="bold-text">
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" checked="checked" name="inlineRadioOptions" id="inlineRadio2" class="ctrl-radio" value="2"> New KPI
+                      </label>
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" id="inlineRadio2" class="ctrl-radio" name="inlineRadioOptions" value="1"> Existing KPI
+                      </label>
+                    </div>
+                    <select style="display: none;" id="drpGoal1" class="form-control drpGoal">
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                    </select>
+                    <input class="form-control second-control" type="text"></input>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">UOM</label>
+                    <select class="form-control">
+                      <option>Number</option>
+                      <option>%</option>
+                      <option>LKR</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">Target Performance</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Score</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Perspective</label>
+                    <select class="form-control" id="drpEmployee">
+                      <option>-- Select Employee --</option>
+                      <option value="1">Financial (2)</option>
+                      <option value="2">Internal Process (4)</option>
+                      <option value="1">Customer (3)</option>
+                      <option value="1">People (1)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn btn-primary form-control btn-form-inline">
+                      <span>Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <table class="table table-striped">
+                <tr>
+                  <th>KPI Description</th>
+                  <th>UOM</th>
+                  <th>Target Performance</th>
+                  <th width="100px">Score</th>
+                  <th>Perspective</th>
+                  <th width="100px"></th>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>Financial</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>Financial</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>People</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+              </table </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group  view-type-three" style="display: none" >
+          <button class="btn btn-primary btnNewGoal" id="btnNewGoal">
+            <span>Delegate New Goal</span>
+          </button>
+        </div>
+        <div class="container-panel view-type-three"  style="display: none" >
+          <div class="container-title">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+          </div>
+          <div class="container-panel">
+            <div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="bold-text">
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" checked="checked" name="inlineRadioOptions" id="inlineRadio2" class="ctrl-radio" value="2"> New KPI
+                      </label>
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" id="inlineRadio2" class="ctrl-radio" name="inlineRadioOptions" value="1"> Existing KPI
+                      </label>
+                    </div>
+                    <select style="display: none;" id="drpGoal1" class="form-control drpGoal">
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                    </select>
+                    <input class="form-control second-control" type="text"></input>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">UOM</label>
+                    <select class="form-control">
+                      <option>Number</option>
+                      <option>%</option>
+                      <option>LKR</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">Target Performance</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Score</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Perspective</label>
+                    <select class="form-control" id="drpEmployee">
+                      <option>-- Select Employee --</option>
+                      <option value="1">Financial (2)</option>
+                      <option value="2">Internal Process (4)</option>
+                      <option value="1">Customer (3)</option>
+                      <option value="1">People (1)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn btn-primary form-control btn-form-inline">
+                      <span>Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <table class="table table-striped">
+                <tr>
+                  <th>KPI Description</th>
+                  <th>UOM</th>
+                  <th>Target Performance</th>
+                  <th width="100px">Score</th>
+                  <th>Perspective</th>
+                  <th width="100px"></th>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>Financial</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>Financial</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>People</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+              </table </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-panel view-type-three"  style="display: none" >
+          <div class="container-title">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+          </div>
+          <div class="container-panel">
+            <div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="bold-text">
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" checked="checked" name="inlineRadioOptions" id="inlineRadio2" class="ctrl-radio" value="2"> New KPI
+                      </label>
+                      <label class="radio-inline bold-text-i">
+                        <input type="radio" id="inlineRadio2" class="ctrl-radio" name="inlineRadioOptions" value="1"> Existing KPI
+                      </label>
+                    </div>
+                    <select style="display: none;" id="drpGoal1" class="form-control drpGoal">
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                      <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</option>
+                    </select>
+                    <input class="form-control second-control" type="text"></input>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">UOM</label>
+                    <select class="form-control">
+                      <option>Number</option>
+                      <option>%</option>
+                      <option>LKR</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="disabledTextInput">Target Performance</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Score</label>
+                    <input class="form-control" type="text"></input>
+                  </div>
+                  <div class="col-md-1">
+                    <label for="disabledTextInput">Perspective</label>
+                    <select class="form-control" id="drpEmployee">
+                      <option>-- Select Employee --</option>
+                      <option value="1">Financial (2)</option>
+                      <option value="2">Internal Process (4)</option>
+                      <option value="1">Customer (3)</option>
+                      <option value="1">People (1)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn btn-primary form-control btn-form-inline">
+                      <span>Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <table class="table table-striped">
+                <tr>
+                  <th>KPI Description</th>
+                  <th>UOM</th>
+                  <th>Target Performance</th>
+                  <th width="100px">Score</th>
+                  <th>Perspective</th>
+                  <th width="100px"></th>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>Financial</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>Financial</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</td>
+                  <td>Number</td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tbx achievement">
+                      <input type="text" class="t-center">
+                    </div>
+                  </td>
+                  <td>People</td>
+                  <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+              </table </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+    <script src="js/page.dgoals.js" type="text/javascript"></script>
+  </section>
+
+</body>
+
+</html>

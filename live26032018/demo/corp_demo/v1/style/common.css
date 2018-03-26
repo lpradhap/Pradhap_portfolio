@@ -1,0 +1,371 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
+	font-size: 14px
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+	box-sizing: border-box;
+}
+/* general styling */
+body h2 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top:0;
+	margin-bottom: 20px;
+}
+header {
+	background: #f8f9fb;
+	min-height: 65px;
+}
+.t-right {
+	text-align: right;
+}
+.t-left {
+	text-align: left;
+}
+.t-center {
+	text-align: center;
+}
+.f-left {
+	float: left;
+}
+.f-right {
+	float: right;
+}
+.t-left-i {
+	text-align: left !important;
+}
+.tbx input {
+	width: 100%;
+}
+.bold-text {
+	font-weight: bold;
+}
+.bold-text-i {
+	font-weight: bold !important
+}
+.small-font {
+	font-size: 9px
+}
+.tbx.achievement {
+	width: 80px
+}
+.btn.btn-default.cblue {
+	background: #315083;
+	color: #fff;
+}
+/* header */
+
+.btn-nav {
+	background: url(../images/btn-nav.png) no-repeat center center;
+	width: 65px;
+	height: 65px;
+	border: solid 1px #e4e5e7;
+	border-width: 0 1px;
+	display: block
+}
+.logo-panel,
+.search-panel {
+	padding-right: 0 !important;
+}
+.logo {
+	margin: 20px 0 0 0;
+}
+
+.action-panel > div {
+    display: inline-block;
+    margin-top: 14px;
+}
+.action-panel > div button {
+	background: #f0f0f0;
+	border-radius: 0;
+	margin:0;
+}
+.action-panel button {
+	border: solid 1px #dfdfdf
+}
+.noti .noti-info {
+	font-size: 18px;
+}
+.noti .noti-info .count {
+background: #e40000;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    padding: 3px;
+    color: #fff;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    font-size: 9px;
+    }
+.noti .dropdown-menu>li>a{
+	white-space: normal;
+}
+.user-info .fa-user {
+	margin-right: 10px;
+}
+header .middle-panel {
+	background: #f8f9fb;
+	border: solid 1px #e4e5e7;
+	border-width: 1px 0
+}
+header .search-panel {
+	padding-left: 5px;
+
+}
+header .search-panel > div {
+	background:#ffffff url(../images/icn-search.png) no-repeat right center;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    padding-right: 30px;
+}
+header .search-panel .c-search {
+    height: 35px;
+    padding: 5px;
+    border: 0;
+    width: 100%;
+    outline: none;
+}
+.breadcrum-panel {
+	padding-top: 14px;
+}
+.breadcrum-panel a {
+	color: #000;
+}
+.breadcrum-panel a:after {
+	content: "|";
+	margin: 0 5px;
+	display: inline-block;
+}
+.breadcrum-panel a:last-child {
+	font-weight: bold;
+}
+.breadcrum-panel a:last-child:after {
+	display: none
+}
+/* main menu */
+
+.left-nav  {
+	background: #f8f9fb;
+    border-right: solid 1px #e4e5e7;
+    padding: 0 !important;
+}
+.left-nav > ul {
+	padding: 0;
+}
+.left-nav > ul .sub-menu {
+	margin-left: 30px;
+}
+.left-nav  a {
+	padding: 10px;
+	display: table;
+	color: #1f1f1f;
+	width: 100%;
+}
+.left-nav  a i, .left-nav  a span {
+	display: table-cell;
+	vertical-align: middle;
+}
+.left-nav  a i {
+	width: 30px;
+	font-size: 18px;
+}
+.left-nav  a:hover {
+	text-decoration: none;
+	background: #ddd;
+}
+/* content panel */
+.content-wrapper {
+	padding: 20px;
+}
+.link-goal {
+	color: #000;
+	display: block;
+}
+.link-goal:hover {
+	text-decoration: none;
+}
+.goal-panel {
+	cursor: pointer;
+}
+.goal-panel > a{
+	background: #f1f1f1;
+	padding:5px 10px;
+	margin-bottom: 10px;
+
+}
+.goal-panel .form-group {
+	margin-bottom: 0;
+}
+.no-records {
+	border: solid 1px #ddd;
+	background: #fff;
+	text-align: center;
+	padding: 20px;
+}
+.container-panel {
+	border: solid 1px #ddd;
+	padding: 10px 15px 0;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+.container-title {
+	background: #fff;
+	padding: 0;
+	font-weight: bold;
+	border-bottom: solid 1px #ddd;
+	margin-bottom: 15px;
+}
+.container-title span{
+	border-bottom: solid 3px #2c519f;
+}
+.btn-form-inline {
+	margin-top: 25px;
+}
+.second-control {
+	margin-top: 10px;
+}
+/*grid view */
+.gvi {
+	background: #fff;
+}
+.gvi table {
+	width: 100%;
+}
+.gvi th {
+	background:#f8f9fb;
+	font-weight: bold;
+	padding:8px;
+}
+.gvi td {
+	border-bottom: solid 1px #ddd;
+	padding: 8px;
+}
+/* login page */
+.page-login {
+	height: 100%;
+	background: #f7f7f7
+}
+
+.login-wrapper {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 350px;
+	height: 180px;
+}
+.login-logo {
+	margin: 0 0 20px 0
+}
+.login-panel {
+	position: relative;
+}
+.login-wrapper .tbx {
+	margin-bottom: 5px ;
+	margin-right: 40px
+
+}
+.login-wrapper .tbx input{
+	background: #315083;
+	height: 40px;
+	line-height: 40px;
+	border: 0;
+	display: block;
+	padding: 0 10px;
+	color: #fff;
+}
+.login-wrapper button {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background: #ff9900;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    border: solid 10px #f7f7f7;
+    cursor: pointer;
+}
+
+.login-wrapper i {
+	font-size: 20px;
+}
+.forget-password {
+	margin-right: 40px;
+}
+
+/* organisation view */
+.org-view {
+	padding: 0 20px;
+}
+.sub-active {
+	position: relative;
+	cursor: pointer;
+}
+.sub-active:after {
+	    content: "\f078";
+			font-family: fontawesome;
+}
+.sub-active  div {
+	position: absolute;
+	top: 47px;
+	background: #fff;
+	width: 200px;
+	text-align: left;
+	border: solid 1px #808080;
+}
+.sub-active  div a {
+	display: block;
+	padding: 4px 10px;
+}
+.sub-active  div a:hover {
+	background:  #eee;
+}
+.action-panel {
+		background: url("../images/Hayleys_logo.png") no-repeat center 7px !important;
+    height: 60px;
+    background-size: auto 80%;
+}

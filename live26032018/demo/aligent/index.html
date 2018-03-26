@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aligent Javascript Assignment | Pradhap loganathan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link href="style/reset.css" rel="stylesheet" type="text/css" />
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+    <link href="style/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="style/rwd.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/knockout-3.4.2.js"></script>
+</head>
+
+<body class="page-product-detail">
+    <div class="wrapper" id="product-detail">
+        <div class="header-panel">
+            <div class="style-filter">
+                <div class="style-title">Beer Style</div>
+                <ul data-bind="foreach: beerStyles">
+                    <li data-bind="click: $parent.updatStyle.bind($data)">
+                        <label data-bind="attr: { 'for': id }">
+                            <input type="checkbox" data-bind="attr: { 'id':id}, checked: $parent.findActiveStyle($data)" name="styleset" />
+                            <span></span>
+                            <!--ko text:  name -->
+                            <!--/ko-->
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="drag-filter">
+                <div class="filter-box">
+                    <div class="title">ABV:</div>
+                    <div class="range-control">
+                        <div class="range-slider" id="slider-range" data-max-range="23" data-min-range="0"></div>
+                        <div class="clearfix">
+                            <input type="text" data-bind="value: abvMinFilter" class="min-amt range-val flt-l">
+                            <input type="text" data-bind="value: abvMaxFilter" class="max-amt range-val flt-r text-right" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-box">
+                    <div class="title">IBU:</div>
+                    <div class="range-control">
+                        <div class="range-slider" id="slider-range-2" data-max-range="100" data-min-range="0"></div>
+                        <div class="clearfix">
+                            <input type="text" data-bind="value: ibuMinFilter" class="min-amt range-val flt-l" readonly>
+                            <input type="text" data-bind="value: ibuMaxFilter" class="max-amt range-val flt-r text-right" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-panel">
+            
+            <div class="product-list">
+                    <span class="mobile-menu active"></span>
+                <div class="scroll-panel ">
+                    <div class="list-title">Results</div>
+                    <ul data-bind="foreach: beerFilter">
+                        <li data-bind="text: name, click: $parent.setCurrent.bind($data), css: {'current': $root.ProductactiveId() == id}"></li>
+                    </ul>
+                    <div class="no-results-filters" data-bind="visible: beerFilter() == ''">No Results</div>
+
+                </div>
+            </div>
+            <div class="product-detail" data-bind="if: currentProduct()">
+                <div class="product-detail-panel">
+                    <div class="img-panel">
+                        <img data-bind="attr: {src: currentProduct().labels ? currentProduct().labels.large : 'images/no-img.png'}" />
+                    </div>
+                    <div class="info-panel">
+                        <div>
+                            <h1>
+                                <!--ko text: currentProduct().nameDisplay -->
+                                <!--/ko-->
+                                <sup>TM</sup>
+                            </h1>
+                        </div>
+                        <p class="info-desc" data-bind="text: currentProduct().description ? currentProduct().description : ''"></p>
+                        <div class="info-volume">
+                            <table width="100%">
+                                <tr>
+                                    <th>ABV</th>
+                                    <th>IBU</th>
+                                    <th>SRM</th>
+                                    <th>OG</th>
+                                </tr>
+                                <tr>
+                                    <td data-bind="text: currentProduct().abv ? currentProduct().abv : ''">5.5%</td>
+                                    <td data-bind="text: currentProduct().ibu ? currentProduct().ibu : ''">41</td>
+                                    <td data-bind="text: currentProduct().style  ? currentProduct().style.srmMin  : ''">7</td>
+                                    <td data-bind="text: currentProduct().isOrganic ? currentProduct().isOrganic : ''">N/A</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="stlye-panel">
+                            <div class="title">Style</div>
+                            <div class="info" data-bind="text: currentProduct().style ? currentProduct().style.name : ''"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loading-panel" style="display: none;">
+        <div class="content-block">
+            <div>
+                <img src="images/loading.gif" />
+            </div>
+            <div class="loader">Loading</div>
+        </div>
+    </div>
+    <!-- custom scripting files -->
+    <script type="text/javascript" src="js/beer.ui.js"></script>
+    <script type="text/javascript" src="js/beer.config.js"></script>
+    <script type="text/javascript" src="js/beer.productDetail.js"></script>
+    <script type="text/javascript" src="js/beer.ko-productDetail.js"></script>
+</body>
+
+</html>

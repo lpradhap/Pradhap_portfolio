@@ -1,0 +1,73 @@
+/* mobile styling */
+@media only screen and (max-width: 767px) {
+    .product-list {
+            /* left: 100%; */
+    top: 0;
+    z-index: 9;
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    position: fixed;
+    }
+    .img-panel {
+        display: block;
+        text-align: center;
+    }
+    .style-filter li {
+        width: 100%;
+    }
+    .header-panel {
+        display: block;
+        height: 250px;
+        position: relative;
+    }
+    .header-panel > div:last-child {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+  }
+  .header-panel > div:first-child {
+    width: 100%;
+    display: block;
+    height: 85px;
+  }
+  .body-panel {
+      padding: 0;
+  }
+  .product-detail > div > div{
+      display: block;
+  }
+  .img-panel{
+      max-width: 100%;
+      min-width: 100%;
+  }
+  .mobile-menu {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: #7b7f80 url(../images/mob-menu.svg) no-repeat center;
+    display: block;
+    cursor: pointer;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: .2s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  .mobile-menu.active {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+  }
+  .product-list .scroll-panel {
+      overflow: hidden;
+  }
+}

@@ -1,0 +1,833 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
+	font-size: 14px;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+/* general styling */
+
+body h2 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+header {
+	background: #f8f9fb;
+	min-height: 65px;
+}
+
+.t-right {
+	text-align: right;
+}
+
+.t-left {
+	text-align: left;
+}
+
+.t-center {
+	text-align: center;
+}
+
+.f-left {
+	float: left;
+}
+
+.f-right {
+	float: right;
+}
+
+.t-left-i {
+	text-align: left !important;
+}
+
+.tbx input {
+	width: 100%;
+}
+
+.bold-text {
+	font-weight: bold;
+}
+
+.bold-text-i {
+	font-weight: bold !important
+}
+
+.small-font {
+	font-size: 9px
+}
+
+.tbx.achievement {
+	width: 80px
+}
+
+.btn.btn-default.cblue {
+	background: #315083;
+	color: #fff;
+}
+
+.v-top-panel {
+	vertical-align: top;
+}
+/* select control */
+select {
+	-webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    margin: 0px;
+    overflow: hidden;
+    padding: 5px 30px 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* header */
+
+.btn-nav {
+	background: url(../images/btn-nav.png) no-repeat center center;
+	width: 65px;
+	height: 65px;
+	border: solid 1px #ececec;
+	border-width: 0 1px;
+	display: block
+}
+
+.logo-panel,
+.search-panel {
+	padding-right: 0 !important;
+	background: #fff
+}
+
+.logo {
+	margin: 20px 0 0 0;
+}
+
+.action-panel>div {
+	display: inline-block;
+	margin-top: 14px;
+}
+
+.action-panel>div button {
+	background: #f0f0f0;
+	border-radius: 0;
+	margin: 0;
+}
+
+.action-panel button {
+	border: solid 1px #dfdfdf
+}
+
+.noti .noti-info {
+	font-size: 18px;
+}
+
+.noti .noti-info .count {
+	background: #e40000;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	padding: 3px;
+	color: #fff;
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	font-size: 9px;
+}
+
+.noti .dropdown-menu>li>a {
+	white-space: normal;
+}
+
+.user-info .fa-user {
+	margin-right: 10px;
+}
+
+header .middle-panel {
+	background: #2a3f54;
+	border: solid 1px #2a3f54;
+	border-width: 1px 0;
+}
+
+header .search-panel {
+	padding-left: 5px;
+}
+
+header .search-panel>div {
+	background: #a0a3a7 url(../images/icn-search.png) no-repeat right center;
+	margin: 0;
+	padding-right: 35px;
+}
+
+header .search-panel .c-search {
+	height: 35px;
+	padding: 5px;
+	border: 0;
+	width: 100%;
+	outline: none;
+}
+
+.breadcrum-panel {
+	line-height: 35px;
+	color: #fff;
+}
+
+.breadcrum-panel a {
+	color: #fff;
+}
+
+.breadcrum-panel a:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+.breadcrum-panel a:after {
+	content: "|";
+	margin: 0 5px;
+	display: inline-block;
+}
+
+.breadcrum-panel a:last-child {
+	font-weight: bold;
+}
+
+.breadcrum-panel a:last-child:after {
+	display: none
+}
+
+
+/* main menu */
+
+.left-nav {
+	background: #2A3F54;
+	border-right: solid 1px #e4e5e7;
+	padding: 0 !important;
+}
+
+.left-nav>ul {
+	padding: 20px 0 0 0 ;
+}
+
+.left-nav>ul .sub-menu {
+	margin-left: 30px;
+}
+
+.left-nav a {
+	padding: 10px;
+	display: table;
+	color: #fff;
+	width: 100%;
+}
+
+.left-nav a i,
+.left-nav a span {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.left-nav a i {
+	width: 30px;
+	font-size: 18px;
+}
+.left-nav .sub-menu a i {
+	font-size: 14px;
+	color: #a0fdd7;
+}
+.left-nav a:hover,
+.left-nav li.nav-active a {
+	text-decoration: none;
+	background: #354a5f;
+	border-right: solid 5px red;
+	color: #fff;
+}
+
+
+/* content panel */
+
+.content-wrapper {
+	padding: 20px;
+}
+.content-wrapper h2 a {
+	font-size: 12px;
+	margin-left: 30px;
+}
+.content-wrapper h2 a i {
+	margin-right: 10px;
+}
+.link-goal {
+	color: #000;
+	display: block;
+}
+
+.link-goal:hover {
+	text-decoration: none;
+}
+
+.goal-panel {
+	cursor: pointer;
+}
+
+.goal-panel>a {
+	background: #f1f1f1;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+}
+
+.goal-panel .form-group {
+	margin-bottom: 0;
+}
+
+.no-records {
+	border: solid 1px #ddd;
+	background: #fff;
+	text-align: center;
+	padding: 20px;
+}
+
+.container-panel {
+	border: solid 1px #ddd;
+	padding: 10px 15px 0;
+	border-radius: 1px;
+	margin-bottom: 15px;
+	background: #fff;
+	min-height: 100px;
+}
+.container-panel.input-view {
+	padding-bottom: 15px;
+}
+.container-title {
+	background: #fff;
+	padding: 0 0 10px;
+	;
+	font-weight: bold;
+	border-bottom: solid 1px #ddd;
+	margin-bottom: 15px;
+}
+.container-title a {
+	margin-left: 25px;
+	font-weight: normal;
+	text-decoration: underline;
+}
+.container-title span {
+	border-bottom: solid 3px #2c519f;
+}
+
+.btn-form-inline {
+	margin-top: 25px;
+}
+
+.second-control {
+	margin-top: 10px;
+}
+
+.form-inline .form-group label {
+	width: 150px;
+}
+.form-inline .form-group {
+	padding-right: 35px;
+}
+
+/*grid view */
+
+.gvi {
+	background: #fff;
+}
+
+.gvi table {
+	width: 100%;
+}
+
+.gvi th {
+	background: #eef1f7;
+	font-weight: bold;
+	padding: 8px;
+}
+
+.gvi td {
+	border-bottom: solid 1px #ddd;
+	padding: 8px;
+}
+
+.gvi .gvi-title {
+	margin-bottom: 10px;
+}
+
+.gvi .gvi-footer {
+	margin: 10px 0;
+}
+
+
+/* login page */
+
+.page-login {
+	height: 100%;
+	background: #f7f7f7
+}
+
+.login-wrapper {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 350px;
+	height: 180px;
+}
+
+.login-logo {
+	margin: 0 0 20px 0
+}
+
+.login-panel {
+	position: relative;
+}
+
+.login-wrapper .tbx {
+	margin-bottom: 5px;
+	margin-right: 40px
+}
+
+.login-wrapper .tbx input {
+	background: #315083;
+	height: 40px;
+	line-height: 40px;
+	border: 0;
+	display: block;
+	padding: 0 10px;
+	color: #fff;
+	text-transform: lowercase;
+}
+
+.login-wrapper button {
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	background: #ff9900;
+	position: absolute;
+	right: 0;
+	top: 12px;
+	border: solid 10px #f7f7f7;
+	cursor: pointer;
+}
+
+.login-wrapper i {
+	font-size: 20px;
+}
+
+.forget-password {
+	margin-right: 40px;
+}
+
+
+/* loading panel */
+
+.loading-panel {
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border: solid 1px #ddd;
+	background: #fff;
+	text-align: center;
+	padding: 10px;
+}
+
+.loading-panel img {
+	width: 150px;
+}
+
+
+/* goal managment */
+
+.manage-goals {
+	min-height: 400px;
+}
+
+.goal-list li>div.list-item {
+	background: #efefef;
+	border: solid 1px #ddd;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+
+.goal-list li>div.list-item>div {
+	padding: 5px;
+}
+
+.goal-list li>div.list-item:hover {
+	background: #f5f5f5;
+}
+
+.perspective-panel {
+	margin-bottom: 15px;
+}
+.perspective-title {
+	cursor: pointer;
+	font-weight: bold;
+	display: inline;
+}
+.goal-list .link-panel {
+	background: #a1d4c0;
+	text-align: center;
+	border-left: 1px solid #000;
+	;
+}
+
+.goal-list .link-panel:hover {
+	background: #74c7a7;
+}
+
+.goal-list .link-panel a,
+.link-panel a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+.goal-list .link-panel.action {
+	background: #337ab7;
+	color: #fff
+}
+
+.goal-list .link-panel.action a {
+	color: #fff
+}
+
+.kpi-view {
+	margin-bottom: 20px;
+}
+
+.kpi-list .plan,
+.kpi-list .actual,
+.kpi-list .action {
+	width: 150px;
+}
+
+.back-panel {
+	margin-bottom: 5px;
+}
+
+.strategy-panel {
+	position: relative;
+	padding-left: 30px;
+}
+
+.goal-action-panel {
+	position: relative;
+	padding-left: 60px;
+}
+.sub-panel {
+	margin-top: 10px;
+	position: relative;
+}
+.sub-panel::before {
+	content: "\f148";
+	font-family: 'FontAwesome';
+	display: inline-block;
+	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	transform: rotate(90deg);
+	font-size: 25px;
+	position: absolute;
+	left: 0;
+	top: -8px;
+}
+.assign-goal-view.sub-panel::before {
+	top: 0;
+	left: -25px;
+}
+
+.assign-goal-view.sub-panel {
+	margin-left: 10px;
+}
+.goal-action-panel.sub-panel::before {
+	left: 30px;
+}
+
+.control-panel {
+    border: solid 1px #bfd0ea;
+    padding: 10px;
+    margin-bottom: 35px;
+    background: #f2f7ff;
+	position: relative;
+	}
+.control-panel	.close-control {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 20px;
+    vertical-align: top;
+}
+.control-panel .control-title {
+    border-bottom: solid 1px #bbc6d2;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.container-panel .control-title.set-seperator {
+	border-bottom: solid 1px #ddd;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+/* org view */
+.view-goal {
+	position: absolute;
+	z-index: 9;
+	background: #fff;
+	border: solid 1px #ddd;
+	display: none;
+	left: 0;
+	top: 0;
+	width: 200px;
+	padding: 10px;
+	font-size: 12px;
+	font-weight: normal;
+}
+.tree ul {
+    padding-top: 20px; position: relative;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.tree li {
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%; height: 20px;
+}
+.tree li::after{
+	right: auto; left: 50%;
+	border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+	border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 1px solid #ccc;
+	width: 0; height: 20px;
+}
+
+.tree li a{
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #666;
+	font-family: arial, verdana, tahoma;
+	font-size: 11px;
+	display: inline-block;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover+ul li a {
+	background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+}
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before{
+	border-color:  #94a0b4;
+}
+
+/*Thats all. I hope you enjoyed it.
+Thanks :)*/

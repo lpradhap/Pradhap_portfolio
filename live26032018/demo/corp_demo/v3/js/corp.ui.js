@@ -1,0 +1,220 @@
+var corp = {
+    init: function () {
+        corp.leftMenu.init();
+        corp.ControlPanel.init();
+        corp.perspectiveTab.init();
+        corp.closeKpiPanel.init();
+
+        $(window).on('resize scroll', function () {
+            corp.leftMenu.setDimen()
+        })
+    },
+    leftMenu: {
+        _navWrapper: ".left-nav",
+        _activeMenuClass: 'nav-active',
+        init: function () {
+            corp.leftMenu.setDimen();
+            corp.leftMenu.buildMenu();
+            corp.leftMenu.setActiveMenu();
+        },
+        setDimen: function () {
+            setTimeout(function () {
+                console.log($(document).height())
+                var w = $(document).innerHeight()
+                var h = $('header').innerHeight()
+
+                $(corp.leftMenu._navWrapper).innerHeight(w - h - 1)
+            }, 50)
+        },
+        buildMenu: function () {
+            var uid = $('body').data('user')
+            if (uid == 1) {
+                $('.left-nav').prepend(corp.leftMenu.c1_rootMenu)
+            } else if (uid == 2) {
+                $('.left-nav').prepend(corp.leftMenu.c1_department)
+            } else if (uid == 3) {
+                $('.left-nav').prepend(corp.leftMenu.c1_inidvitual)
+            } else if (uid == 4) {
+                $('.left-nav').prepend(corp.leftMenu.c2_rootMenu)
+            } else if (uid == 5) {
+                $('.left-nav').prepend(corp.leftMenu.c2_subMenu)
+            }
+            else if (uid == 6) {
+                $('.left-nav').prepend(corp.leftMenu.c3_rootMenu)
+            }
+            else if (uid == 7) {
+                $('.left-nav').prepend(corp.leftMenu.c3_subMenu)
+            }
+        },
+        setActiveMenu: function () {
+            var activeMenu = $('body').attr('data-active-menu');
+            $('#' + activeMenu).addClass(corp.leftMenu._activeMenuClass);
+        },
+        c1_rootMenu: function () {
+            //this is case1
+            return '<ul>' +
+                '<li id="nav-dashboard"><a class="dashboard" href="#"><i class="fa fa-th-large" aria-hidden="true"></i><span>Dasboard<span></a></li>' +
+                '<li><a href="manage-goal.html"><i class="fa fa-bullseye" aria-hidden="true"></i><span>Goal Management</span></a>' +
+                '<div class="sub-menu">' +
+                '<ul>' +
+                '<li id="nav-org-view"><a href="org-view.html" ><i class="fa fa fa-sitemap" aria-hidden="true"></i><span>Organization View<span></a></li>' +
+                '<li id="nav-goal-manage"><a href="manage-goal.html" ><i class="fa fa-circle-o" aria-hidden="true"></i><span>Manage Goals<span></a></li>' +
+                '<li id="nav-assign-goal"><a href="assign-goal.html"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> <span>Assign Goals<span></a></li>' +
+                '<li id="nav-create-goal"><a href="create-goal.html"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> <span>Create New Goals<span></a></li>' +
+                '</ul>' +
+                '</div>' +
+                '</li>' +
+                '</ul>'
+        },
+        c1_department: function () {
+            //this is case1
+            return '<ul>' +
+                '<li id="nav-dashboard"><a class="dashboard" href="#"><i class="fa fa-th-large" aria-hidden="true"></i><span>Dasboard<span></a></li>' +
+                '<li><a href="manage-goal.html"><i class="fa fa-bullseye" aria-hidden="true"></i><span>Goal Management</span></a>' +
+                '<div class="sub-menu">' +
+                '<ul>' +
+                '<li id="nav-goal-manage"><a href="manage-goal.html" ><i class="fa fa-circle-o" aria-hidden="true"></i><span>Manage Goals<span></a></li>' +
+                '<li id="nav-assign-goal"><a href="assign-goal.html"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> <span>Assign Goals<span></a></li>' +
+                '</ul>' +
+                '</div>' +
+                '</li>' +
+                '</ul>'
+        },
+        c1_inidvitual: function () {
+            //this is case1
+            return '<ul>' +
+                '<li id="nav-dashboard"><a class="dashboard" href="#"><i class="fa fa-th-large" aria-hidden="true"></i><span>Dasboard<span></a></li>' +
+                '<li><a href="manage-goal.html"><i class="fa fa-bullseye" aria-hidden="true"></i><span>Goal Management</span></a>' +
+                '<div class="sub-menu">' +
+                '<ul>' +
+                '<li id="nav-goal-manage"><a href="view-goal.html" ><i class="fa fa-circle-o" aria-hidden="true"></i><span>View Goals<span></a></li>' +
+                '</ul>' +
+                '</div>' +
+                '</li>' +
+                '</ul>'
+        },
+        c2_rootMenu: function () {
+            //this is case2
+            return '<ul>' +
+                '<li id="nav-dashboard"><a class="dashboard" href="#"><i class="fa fa-th-large" aria-hidden="true"></i><span>Dasboard<span></a></li>' +
+                '<li><a href="manage-goal.html"><i class="fa fa-bullseye" aria-hidden="true"></i><span>Goal Management</span></a>' +
+                '<div class="sub-menu">' +
+                '<ul>' +
+                '<li id="nav-assign-goal"><a href="assign-goal.html"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> <span>Assign Goals<span></a></li>' +
+                '<li id="nav-create-goal"><a href="create-goal.html"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> <span>Create New Goals<span></a></li>' +
+                '</ul>' +
+                '</div>' +
+                '<li><a href="manage-kpi.html"><i class="fa fa-university" aria-hidden="true"></i><span>KPI Management</span></a>' +
+                '<div class="sub-menu">' +
+                '<ul>' +
+                '<li id="nav-kpi-manage"><a href="manage-kpi.html" ><i class="fa fa-circle-o" aria-hidden="true"></i><span>Manage KPI<span></a></li>' +
+                '<li id="nav-create-kpi"><a href="create-kpi.html"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> <span>Create New KPI<span></a></li>' +
+                '</ul>' +
+                '</div>' +
+                '</li>' +
+                '</ul>'
+        },
+        c2_subMenu: function () {
+            //this is case2
+            return '<ul>' +
+                '<li id="nav-dashboard"><a class="dashboard" href="#"><i class="fa fa-th-large" aria-hidden="true"></i><span>Dasboard<span></a></li>' +
+                '<li><a href="manage-goal.html"><i class="fa fa-bullseye" aria-hidden="true"></i><span>Goal Management</span></a>' +
+                '<div class="sub-menu">' +
+                '<ul>' +
+                '<li id="nav-assign-goal"><a href="assign-goal.html"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> <span>Assign Goals<span></a></li>' +
+                '</ul>' +
+                '</div>' +
+                '<li><a href="manage-kpi.html"><i class="fa fa-university" aria-hidden="true"></i><span>KPI Management</span></a>' +
+                '<div class="sub-menu">' +
+                '<ul>' +
+                '<li id="nav-kpi-manage"><a href="manage-kpi.html" ><i class="fa fa-circle-o" aria-hidden="true"></i><span>Manage KPI<span></a></li>' +
+                '<li id="nav-create-kpi"><a href="create-kpi.html"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> <span>Create New KPI<span></a></li>' +
+                '</ul>' +
+                '</div>' +
+                '</li>' +
+                '</ul>'
+        },
+        c3_rootMenu: function () {
+            //this is case2
+            return '<ul>' +
+                '<li id="nav-dashboard"><a class="dashboard" href="#"><i class="fa fa-th-large" aria-hidden="true"></i><span>Dasboard<span></a></li>' +
+                '<li><a href="manage-goal.html"><i class="fa fa-bullseye" aria-hidden="true"></i><span>Goal Management</span></a>' +
+                '<div class="sub-menu">' +
+                '<ul>' +
+                '<li id="nav-manage-goal"><a href="manage-goal.html"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> <span>Manage Goals<span></a></li>' +
+                '<li id="nav-assign-goal"><a href="assign-goal.html"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> <span>Assign Goals<span></a></li>' +
+                '<li id="nav-create-goal"><a href="create-goal.html"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> <span>Create New Goals<span></a></li>' +
+                '</ul>' +
+                '</div>' +
+                '</ul>'
+        },
+        c3_subMenu: function () {
+            //this is case2
+            return '<ul>' +
+                '<li id="nav-dashboard"><a class="dashboard" href="#"><i class="fa fa-th-large" aria-hidden="true"></i><span>Dasboard<span></a></li>' +
+                '<li><a href="manage-goal.html"><i class="fa fa-bullseye" aria-hidden="true"></i><span>Goal Management</span></a>' +
+                '<div class="sub-menu">' +
+                '<ul>' +
+                '<li id="nav-manage-goal"><a href="manage-goal.html"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> <span>Manage Goals<span></a></li>' +
+                '<li id="nav-assign-goal"><a href="assign-goal.html"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> <span>Assign Goals<span></a></li>' +
+                '</ul>' +
+                '</div>' +
+                '</ul>'
+        }
+
+
+    },
+    ControlPanel: {
+        _controlCloseButton: '.close-control',
+        _showControlPanel: '.view-control-panel',
+        _controlPanel: '.control-panel',
+        init: function () {
+            $(corp.ControlPanel._showControlPanel).click(function (e) {
+                corp.ControlPanel.showPanel(e)
+            })
+            $(corp.ControlPanel._controlCloseButton).click(function (e) {
+                corp.ControlPanel.closePanel(e)
+            })
+        },
+        showPanel: function (event) {
+            var focusPanel = $(event.target).attr('data-panel');
+            $('#' + focusPanel).slideToggle()
+        },
+        closePanel: function (event) {
+            var element = $(event.target).closest(corp.ControlPanel._controlPanel);
+            $(element).slideToggle()
+        }
+
+    },
+    perspectiveTab: {
+        init: function () {
+            $('.perspective-title').on('click', function () {
+                corp.perspectiveTab.toggle(this)
+            })
+        },
+        toggle: function (el) {
+            if ($(el).children('i').hasClass('fa-minus-square')) {
+                $(el).next('ul').slideToggle();
+                $(el).children('i').removeClass('fa fa-minus-square').addClass('fa fa-plus-square')
+            }
+            else {
+                $(el).next('ul').slideToggle();
+                $(el).children('i').removeClass('fa fa-plus-square').addClass('fa fa-minus-square')
+
+            }
+        }
+    },
+    closeKpiPanel: {
+        init: function () {
+            $('.close-container-panel').on('click', function () {
+                $(this).closest('.container-panel').slideToggle()
+            })
+        }
+    }
+
+}
+
+
+$(document).ready(function () {
+    corp.init()
+})
