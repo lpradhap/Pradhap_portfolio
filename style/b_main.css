@@ -45,7 +45,7 @@ body {
     right: 0;
     bottom: 0;
     margin: auto;
-    width: 315px;
+    width: 350px;
     height: 125px;
     z-index: 999999;
     text-align: center
@@ -801,13 +801,16 @@ h1 {
 }
 
 .showcase-title div.before {
-    content: '';
+    content: ' ';
     position: absolute;
     background: url(../images/showcase-bg.png) repeat;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .portfolio-panel {
